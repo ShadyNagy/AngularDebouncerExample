@@ -10,7 +10,7 @@ import { DataService } from './services/data.service';
 export class AppComponent {
   title = 'angular-debouncer-example';
   inputCode = '';
-  contactMethods = [];
+  list = [];
 
   constructor(private dataService: DataService) {}
 
@@ -18,7 +18,7 @@ export class AppComponent {
     this.dataService.getFilteredByCode(event)
       .subscribe((response: ApiResponse) => {
         if (response != null) {
-          this.contactMethods = response.results;
+          this.list = response.results;
         }
       });
   }

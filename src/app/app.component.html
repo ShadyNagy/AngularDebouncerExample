@@ -347,7 +347,7 @@
         name="contactMethod" 
         id="contactMethod" 
         class="form-control"                >
-        <option *ngFor="let method of contactMethods" [value]="method.mal_id">{{ method.title }}</option>
+        <option *ngFor="let item of list" [value]="item.mal_id">{{ item.title }}</option>
     </select>
   </div>
 
